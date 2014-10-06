@@ -1,0 +1,19 @@
+body {
+  margin-left: 10px;
+}
+.mo-css{
+  border:1px solid #ddd;
+  padding: 15px;
+ }
+.winter{
+  background-color:#fff;
+}
+.fall{
+  background-color:#ffcc33;
+}
+.summer{
+  background-color:#cc6666;
+}
+.spring{
+  background-color:#33ff00;
+}

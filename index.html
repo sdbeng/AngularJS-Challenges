@@ -5,6 +5,16 @@
 	<title>Angularjs challenge</title>
 </head>
 <body>
+
+	<h1>Challenge 1</h1>
+  <div ng-controller="myCtrl">
+    <div ng-repeat="month in months" class="mo-css" ng-model="mySeason">
+      <div ng-switch="mySeason">
+      <p>{{month.english}}</p>
+      <p>French word: {{month.french}}</p>
+      <p>Number of Days: {{month.days}}</p>
+    </div>
+  </div>
 	
 </body>
 </html>
