@@ -12,7 +12,11 @@
 	    <div ng-controller="myCtrl">
 	    	
 		    <div ng-repeat="month in months | orderBy:'ordinal'" 
-		    ng-class="{'winter':winter,'fall':'fall'}" class="mo-css" >
+		    ng-class="{'winter':month.season=='winter',
+		    			'spring':month.season=='spring',
+						'summer':month.season=='summer',
+						'fall':month.season=='fall'
+					  }"  class="mo-css" >
 		      	<div>
 			      <p>{{month.english}}</p>
 			      <p>French word: {{month.french}}</p>
