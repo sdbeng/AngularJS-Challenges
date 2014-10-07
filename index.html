@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Angularjs challenge</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 
-	<h1>Challenge 1</h1>
-  <div ng-controller="myCtrl">
-    <div ng-repeat="month in months" class="mo-css" ng-model="mySeason">
-      <div ng-switch="mySeason">
-      <p>{{month.english}}</p>
-      <p>French word: {{month.french}}</p>
-      <p>Number of Days: {{month.days}}</p>
-    </div>
-  </div>
+	<div class="container">
+		<h1>Challenge 1:My Seasons</h1>
+	    <div ng-controller="myCtrl">
+	    	
+		    <div ng-repeat="month in months | orderBy:'ordinal'" 
+		    ng-class="{'winter':winter,'fall':'fall'}" class="mo-css" >
+		      	<div>
+			      <p>{{month.english}}</p>
+			      <p>French word: {{month.french}}</p>
+			      <p>Number of Days: {{month.days}}</p>
+		    	</div>
+		  	</div>
+	    </div>
+
+	    <!-- Test sample angular controller -->
+	    <h2>Testing...</h2><hr>
+	    <div ng-controller="testCtrl">
+	    	Two times <input ng-model="num"> equals {{double(num)}}
+	    </div>
+	</div>
 	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

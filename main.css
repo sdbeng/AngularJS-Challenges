@@ -1,5 +1,13 @@
 body {
-  margin-left: 10px;
+  /*margin-left: 10px;*/
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+	margin: 0 auto;
+	background-color: #fff;
+	width: 650px;
+	text-align: center;
+	padding: 10px 10px 60px 10px;
 }
 .mo-css{
   border:1px solid #ddd;

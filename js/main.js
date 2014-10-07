@@ -1,24 +1,32 @@
-angular.module('myApp', []).
-controller('myCtrl', function($scope) {
+angular.module('myApp', [])
+
+.controller('testCtrl', ['$scope', function($scope){
+  // $scope.testVar = "Hey";
+
+  $scope.double = function(value) { return value * 2; };
+  
+}])
+
+.controller('myCtrl', ['$scope', function($scope) {
    var months = [ 
     {english: 'August',
     french: 'Aout',
     days: 31,
     ordinal: 8,
-     season: 'summer'
-   },
-   {english: 'March',
-    french: 'Mars',
-    days: 31,
-    ordinal: 3,
-    season: 'spring'
-   },
-  {english: 'February',
-    french: 'Fevrier',
-    days: 28,
-    ordinal: 2,
-   season: 'winter'
-   },
+    season: 'summer'
+    },
+    {english: 'March',
+      french: 'Mars',
+      days: 31,
+      ordinal: 3,
+      season: 'spring'
+    },
+    {english: 'February',
+      french: 'Fevrier',
+      days: 28,
+      ordinal: 2,
+     season: 'winter'
+     },
   {english: 'April',
     french: 'Avril',
     days: 30,
@@ -75,4 +83,4 @@ controller('myCtrl', function($scope) {
    }
   ];  
   $scope.months = months;
-});
+}]);
