@@ -29,8 +29,27 @@
 	    <h2>Testing...</h2><hr>
 	    <div ng-controller="testCtrl">
 	    	Two times <input ng-model="num"> equals {{double(num)}}
-	    </div>
+	    </div><hr>
+
+
+	    <!-- FizzBuzz ctrl -->
+		<h2>FizzBuzz Challeng</h2>
+		<div ng-controller="fizzBuzzCtrl">
+			
+		<span ng-model="rockNum()">{{rockNum(numbers)}}</span>
+
+		</div><hr>
+
+		<!-- custom directives -->
+		<h2>testing custom directives</h2>
+
+			<my-widget>
+				<p>Hello world</p>
+			</my-widget>
+
 	</div>
+
+	
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>

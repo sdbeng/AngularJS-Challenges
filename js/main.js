@@ -1,11 +1,23 @@
 angular.module('myApp', [])
 
+.controller('fizzBuzzCtrl', ['$scope', function($scope){
+  $scope.numbers = new Array(100);
+
+  $scope.rockNum = function(){
+    for (var i = 0; i <= numbers.length; i++) {
+      console.log(numbers[i]+1);
+    };
+  }
+}])
+
 .controller('testCtrl', ['$scope', function($scope){
   // $scope.testVar = "Hey";
 
   $scope.double = function(value) { return value * 2; };
   
 }])
+
+
 
 .controller('myCtrl', ['$scope', function($scope) {
    var months = [ 
@@ -84,3 +96,17 @@ angular.module('myApp', [])
   ];  
   $scope.months = months;
 }]);
+
+// .directive("myWidget", function(){
+//   var linkFunction = function(scope,element,attributes) {
+//     var paragraph = element.children()[0];
+//     $(paragraph).on('click', function() {
+//       $(this).css({"backgroung-color": "red});
+//     });
+//   };
+
+//   return {
+//     restrict: "E",
+//     link: linkFunction
+//   };
+// });
